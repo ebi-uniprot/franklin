@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display menu component should render 1`] = `
+<DocumentFragment>
+  <ul
+    class="display-menu"
+  >
+    <ul
+      class="no-bullet"
+    >
+      <li>
+        <h5
+          class="display-menu__item_title"
+        >
+          <a
+            aria-current="page"
+            class="display-menu__item_title--active"
+            href="///main"
+          >
+            <span
+              class="display-menu__item_icon"
+            >
+              <test-file-stub />
+            </span>
+            Item 1
+          </a>
+        </h5>
+        <div
+          class="display-menu__item_content"
+        >
+          <ul
+            class="no-bullet"
+          >
+            <li>
+              Something
+            </li>
+            <li>
+              Something
+            </li>
+            <li>
+              Something
+            </li>
+            <li>
+              Something
+            </li>
+            <li>
+              Something
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h5
+          class="display-menu__item_title"
+        >
+          <a
+            href="///item2"
+          >
+            <span
+              class="display-menu__item_icon"
+            />
+            Item 2
+          </a>
+        </h5>
+      </li>
+      <li>
+        <h5
+          class="display-menu__item_title"
+        >
+          <a
+            href="///item3"
+          >
+            <span
+              class="display-menu__item_icon"
+            />
+            Item 3
+          </a>
+        </h5>
+      </li>
+    </ul>
+  </ul>
+</DocumentFragment>
+`;

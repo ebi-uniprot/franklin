@@ -20,6 +20,17 @@
     "implicit-arrow-linebreak": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/jsx-filename-extension": "disable"
+    "react/jsx-filename-extension": "disable",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          ".storybook/**",
+          "stories/**",
+          "./src/addons/**",
+          "**/*.spec.jsx"
+        ]
+      }
+    ]
   }
 }

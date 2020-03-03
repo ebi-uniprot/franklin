@@ -1,132 +1,132 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card component should render 1`] = `
-<div
-  className="card "
->
+<DocumentFragment>
   <div
-    className="card__header"
+    class="card "
   >
-    <h2
-      className="card__title"
+    <div
+      class="card__header"
     >
-      Title
-    </h2>
-    
+      <h2
+        class="card__title"
+      >
+        Title
+      </h2>
+    </div>
+    <div
+      class="card__content"
+    >
+      <span>
+        Some content
+      </span>
+    </div>
   </div>
-  <div
-    className="card__content"
-  >
-    <span>
-      Some content
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Card component should render card with links 1`] = `
-<div
-  className="card "
->
+<DocumentFragment>
   <div
-    className="card__header"
-  >
-    <h2
-      className="card__title"
-    >
-      Title
-    </h2>
-    <div
-      className="card__subtitle"
-    >
-      Subtitle
-    </div>
-  </div>
-  <div
-    className="card__actions"
+    class="card "
   >
     <div
-      className="card__link"
-      style={
-        Object {
-          "borderColor": "red",
-        }
-      }
+      class="card__header"
     >
-      <a
-        href="/example.com"
-        onClick={[Function]}
+      <h2
+        class="card__title"
       >
-        link
-      </a>
+        Title
+      </h2>
+      <div
+        class="card__subtitle"
+      >
+        Subtitle
+      </div>
+    </div>
+    <div
+      class="card__actions"
+    >
+      <div
+        class="card__link"
+        style="border-color: red;"
+      >
+        <a
+          href="/example.com"
+        >
+          link
+        </a>
+      </div>
+    </div>
+    <div
+      class="card__content"
+    >
+      <span>
+        Some content
+      </span>
     </div>
   </div>
-  <div
-    className="card__content"
-  >
-    <span>
-      Some content
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Card component should render card with onclick 1`] = `
-<div
-  className="card  card--has-hover"
-  onClick={[Function]}
-  onKeyDown={[Function]}
-  role="button"
-  tabIndex={0}
->
+<DocumentFragment>
   <div
-    className="card__header"
+    class="card  card--has-hover"
+    role="button"
+    tabindex="0"
   >
-    <h2
-      className="card__title"
-    >
-      Title
-    </h2>
     <div
-      className="card__subtitle"
+      class="card__header"
     >
-      Subtitle
+      <h2
+        class="card__title"
+      >
+        Title
+      </h2>
+      <div
+        class="card__subtitle"
+      >
+        Subtitle
+      </div>
+    </div>
+    <div
+      class="card__content"
+    >
+      <span>
+        Some content
+      </span>
     </div>
   </div>
-  <div
-    className="card__content"
-  >
-    <span>
-      Some content
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`Card component should render card with subtitle 1`] = `
-<div
-  className="card "
->
+<DocumentFragment>
   <div
-    className="card__header"
+    class="card "
   >
-    <h2
-      className="card__title"
-    >
-      Title
-    </h2>
     <div
-      className="card__subtitle"
+      class="card__header"
     >
-      Subtitle
+      <h2
+        class="card__title"
+      >
+        Title
+      </h2>
+      <div
+        class="card__subtitle"
+      >
+        Subtitle
+      </div>
+    </div>
+    <div
+      class="card__content"
+    >
+      <span>
+        Some content
+      </span>
     </div>
   </div>
-  <div
-    className="card__content"
-  >
-    <span>
-      Some content
-    </span>
-  </div>
-</div>
+</DocumentFragment>
 `;

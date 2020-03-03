@@ -1,17 +1,25 @@
-@import "../settings";
-@import "../colours";
+@import '../settings';
+@import '../colours';
 
 .evidence-tag {
   cursor: pointer;
+  position: relative;
+  display: inline-block;
   font-size: $small-font-size;
   white-space: nowrap;
+  font-size: 0.75rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
   margin-left: ($global-margin/2);
-  border-radius: $global-padding/2;
+  border-radius: $global-padding/4;
   background-color: $colour-azureish-white;
-  padding: $global-padding/4 $global-padding/2;
+  padding: 0 $global-padding/4;
   color: $colour-yankees-blue;
+  svg {
+    position: absolute;
+  }
   &__label {
-    padding-left: ($global-padding / 4);
+    padding-left: ($global-padding);
     text-transform: capitalize;
   }
 }

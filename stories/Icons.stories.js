@@ -17,6 +17,11 @@ import {
   SearchIcon,
   CloseIcon,
   EditIcon,
+  PublicationIcon,
+  CitedIcon,
+  CitedSpeechIcon,
+  ComputerMappedIcon,
+  EvidenceTagIcon,
 } from '../src/components';
 
 export default {
@@ -110,6 +115,31 @@ const iconDefinition = [
     name: 'pen.svg',
     description: 'Edit',
     icon: <EditIcon width={size} height={size} />,
+  },
+  {
+    name: 'publication.svg',
+    description: 'Publication',
+    icon: <PublicationIcon width={size} height={size} />,
+  },
+  {
+    name: 'cited.svg',
+    description: 'Cited',
+    icon: <CitedIcon width={size} height={size} />,
+  },
+  {
+    name: 'cited-speech.svg',
+    description: 'Cited Speech',
+    icon: <CitedSpeechIcon width={size} height={size} />,
+  },
+  {
+    name: 'computer-mapped.svg',
+    description: 'Computer Mapped',
+    icon: <ComputerMappedIcon width={size} height={size} />,
+  },
+  {
+    name: 'evidence-tag.svg',
+    description: 'Evidence Tag',
+    icon: <EvidenceTagIcon width={size} height={size} />,
   },
 ];
 

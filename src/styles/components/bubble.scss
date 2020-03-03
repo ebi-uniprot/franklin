@@ -5,7 +5,6 @@
 @mixin bubble($size) {
   display: inline-block;
   margin: 0 $global-margin/5;
-  color: $colour-sky-white;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;

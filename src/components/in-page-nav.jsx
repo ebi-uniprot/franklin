@@ -1,26 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import smoothscroll from "smoothscroll-polyfill";
 import '../styles/components/in-page-nav.scss';
 
-const InPageNav__old = ({ sections, sticky = true }) => (
-  <div className={`in-page-nav ${sticky && 'in-page-nav--sticky'}`}>
-    <div items={sections.map(section => section.id)} currentClassName="in-page-nav--active">
+const InPageNav__old = ({ sections }) => (
+  <div className="in-page-nav">
+    <Scrollspy
+      items={sections.map(section => section.id)}
+      currentClassName="in-page-nav--active"
+    >
       {sections.map(section => (
-        <li className={section.disabled && 'in-page-nav--disabled'} key={section.label}>
+        <li
+          className={section.disabled && 'in-page-nav--disabled'}
+          key={section.label}
+        >
           <a href={`#${section.id}`}>{section.label}</a>
         </li>
       ))}
-    </div>
+    </Scrollspy>
   </div>
 );
 
+smoothscroll.polyfill();
+
+function useScrollToHash() {
+  useEffect(() => {
+    const { hash } = window.location;
+    const id = hash ? hash.replace("#", "") : "top";
+    const element = document.getElementById(id);
+console.log("scroll to hash:", element);
+    if (element) {
+      element.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+    }
+  }, []);
+}
+
+function onScrollSection(sectionId) {
+  // console.log("section scrolling:", sectionId);
+}
+
+function onVisibleSection(sectionId, isVisible) {
+  // console.log("section visibilty:", sectionId, isVisible);
+}
+
 // Recursively generates the entire menu and sub-menu items.
-function generateNavMenu(navItems, active, onClick) {
-  const items = navItems.map((item) => {
+function generateNavMenu(items, active, onClick) {
+  const navItems = items.map((item) => {
     const { pathname, hash } = document.location;
     const currentPage = `${pathname}${hash}`;
+    let classNames = [];
 
     // If no item is 'active' by scroll or click events triggered by the user,
     // check if the item's 'to' value is matching the current page address. If
@@ -46,13 +80,20 @@ function generateNavMenu(navItems, active, onClick) {
     // and a few other things as well, so we have to do use the 'HashLink' and do some
     // manual work to handle the active elements.
     else if (item.type === "hash") {
+
+      if (active === item.section) {
+        classNames.push('in-page-nav--active');
+      }
+
       el = (
         <HashLink
           to={item.to}
           smooth
           id={item.id}
-          className={active === item.section && "active"}
-          onClick={() => onClick(item.section)}
+          onClick={() => {
+console.log("hash link clicked");
+            onClick(item.section);
+          }}
         >
           {item.label}
         </HashLink>
@@ -62,19 +103,57 @@ function generateNavMenu(navItems, active, onClick) {
     const submenu = item.children ? generateNavMenu(item.children) : null;
 
     return (
-      <li>
+      <li className={classNames.join(' ')}>
         {el}
         {submenu}
       </li>
     );
   });
 
-  return <ul>{items}</ul>;
+  return <ul className="in-page-nav">{navItems}</ul>;
 }
 
 const InPageNav = ({ items, active, onClick }) => {
+  const [activeSection, setActiveSection] = useState(null);
+// console.log("+ new active section:", active);
+  useScrollToHash();
 
-  return 'okay';
+  function sectionVisibilityCheck(elId, rect) {
+console.log("vis check:", elId, rect);
+    if (!rect || activeSection === elId) {
+      setActiveSection(null);
+      return false;
+    }
+
+    const { top, bottom } = rect;
+    // console.log("rect:", elId, rect);
+    // const clientHeight = document.documentElement.clientHeight;
+
+    if (top < 50 && bottom > 50) {
+      // || (top < clientHeight && bottom > clientHeight - 50)
+
+      // console.log("visible item:", elId);
+
+      if (activeSection !== elId) {
+        setActiveSection(elId);
+      }
+
+      return true;
+    }
+
+    return false;
+  }
+
+  function setActiveSectionOnClick(sectionId) {
+    setActiveSection(sectionId);
+  }
+
+  return (
+    <Router>
+      {/* generateNavMenu(items, active, onClick) */}
+      {generateNavMenu(items, activeSection, setActiveSectionOnClick)}
+    </Router>
+  );
 };
 
 InPageNav.propTypes = {
@@ -85,6 +164,7 @@ InPageNav.propTypes = {
 
 InPageNav.defaultProps = {
   sticky: true,
+  sections: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default InPageNav;

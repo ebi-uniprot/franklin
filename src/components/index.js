@@ -29,8 +29,12 @@ export { default as AccordionSearch } from './accordion-search';
 export { default as Window } from './window/window';
 export { WindowActionButton } from './window/window-buttons';
 export { default as ModalBackdrop } from './modal-backdrop';
-export { default as useModal } from '../hooks/modal';
 export { default as ButtonModal } from './button-modal';
+export { default as Publication } from './publication';
+export { default as DisplayMenu } from './display-menu';
+export { default as withVisualSensor } from './withVisualSensor';
+
+export { default as useModal } from '../hooks/modal';
 
 export { default as ObsoleteIcon } from '../svg/obsolete.svg';
 export { default as SwissProtIcon } from '../svg/swissprot.svg';
@@ -49,3 +53,8 @@ export { default as ConfigureIcon } from '../svg/cog.svg';
 export { default as SearchIcon } from '../svg/search.svg';
 export { default as CloseIcon } from '../svg/times.svg';
 export { default as EditIcon } from '../svg/pen.svg';
+export { default as PublicationIcon } from '../svg/publication.svg';
+export { default as CitedIcon } from '../svg/cited.svg';
+export { default as CitedSpeechIcon } from '../svg/cited-speech.svg';
+export { default as ComputerMappedIcon } from '../svg/computer-mapped.svg';
+export { default as EvidenceTagIcon } from '../svg/evidence-tag.svg';

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import TagIcon from '../svg/tag.svg';
+import EvidenceTagIcon from '../svg/evidence-tag.svg';
 import '../styles/components/evidence-tag.scss';
 
 const size = 12;
@@ -65,7 +65,7 @@ EvidenceTag.propTypes = {
 EvidenceTag.defaultProps = {
   title: '',
   className: '',
-  iconComponent: <TagIcon />,
+  iconComponent: <EvidenceTagIcon />,
   children: null,
 };
 

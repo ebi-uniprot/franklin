@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component should render 1`] = `
-<div
-  className="header"
->
+<DocumentFragment>
   <div
-    className="header__logo"
+    class="header"
   >
-    <a
-      href="/"
-      onClick={[Function]}
+    <div
+      class="header__logo"
+    >
+      <a
+        href="/"
+      />
+    </div>
+    <ul
+      class="header__navigation"
+    >
+      <li>
+        <a
+          href="/there"
+        >
+          there
+        </a>
+      </li>
+    </ul>
+    <div
+      class="header__search"
     />
   </div>
-  <ul
-    className="header__navigation"
-  >
-    <li>
-      <a
-        href="/there"
-        onClick={[Function]}
-      >
-        there
-      </a>
-    </li>
-  </ul>
-  <div
-    className="header__search"
-  />
-</div>
+</DocumentFragment>
 `;

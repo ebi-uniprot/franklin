@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Publication component should render 1`] = `
+<DocumentFragment>
+  <section
+    class="publication"
+  >
+    <h4>
+      The Zoology of the Voyage of H.M.S. Beagle.
+    </h4>
+    <section
+      class="publication__authors"
+    >
+      <a
+        href="/"
+      >
+        Darwin C.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin B.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin A.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin D.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin E.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin F.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin G.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin H.
+      </a>
+      , 
+      <a
+        href="/"
+      >
+        Darwin I.
+      </a>
+      <button
+        class="button tertiary"
+        type="button"
+      >
+        [...]
+      </button>
+      , 
+      <a
+        href="/"
+      >
+        Darwin X.
+      </a>
+    </section>
+    <section>
+      <button
+        class="button tertiary"
+        type="button"
+      >
+        View abstract [...]
+      </button>
+    </section>
+    <section
+      class="publication__columns"
+    >
+      <section
+        class="publication__columns__main"
+      >
+        <div
+          class="info-list"
+        >
+          <div
+            class="info-list__item"
+          >
+            <div
+              class="info-list__item__title"
+            >
+              <h5
+                class="bold"
+              >
+                Tortoise
+              </h5>
+            </div>
+            <div
+              class="info-list__item__content"
+            >
+              <em>
+                Reptile species of the family Testudinidae of the order Testudines (the turtles).
+              </em>
+            </div>
+          </div>
+          <div
+            class="info-list__item"
+          >
+            <div
+              class="info-list__item__title"
+            >
+              <h5
+                class="bold"
+              >
+                Beetles
+              </h5>
+            </div>
+            <div
+              class="info-list__item__content"
+            >
+              Charles really liked them.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="publication__columns__side"
+      >
+        <section
+          class="publication__columns__side__item"
+        >
+          <test-file-stub
+            height="2rem"
+            width="1.875rem"
+          />
+          <ul
+            class="no-bullet"
+          >
+            <li>
+              <a
+                href="//www.ncbi.nlm.nih.gov/pubmed/123456"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                PubMed
+              </a>
+            </li>
+            <li>
+              <a
+                href="//europepmc.org/article/MED/123456"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Europe PMC
+              </a>
+            </li>
+            <li>
+              <small>
+                <a
+                  href="//dx.doi.org/10.1038/331525a0"
+                >
+                  Nature 331:525-527(1988)
+                </a>
+              </small>
+            </li>
+          </ul>
+        </section>
+        <section
+          class="publication__columns__side__item"
+        >
+          <section
+            class="publication__statistics"
+          >
+            <section
+              class="publication__statistics__item"
+            >
+              <a
+                href="/"
+              >
+                <section>
+                  <small>
+                    Mapped to
+                  </small>
+                </section>
+                <section
+                  class="publication__statistics__bubble"
+                >
+                  <span
+                    class="bubble--small colour-pastel-blue"
+                  >
+                    3
+                  </span>
+                  <test-file-stub
+                    height="15"
+                    width="15"
+                  />
+                </section>
+              </a>
+            </section>
+            <section
+              class="publication__statistics__item"
+            >
+              <a
+                href="/"
+              >
+                <section>
+                  <small>
+                    Cited in
+                  </small>
+                </section>
+                <section
+                  class="publication__statistics__bubble"
+                >
+                  <span
+                    class="bubble--small colour-pastel-blue"
+                  >
+                    1
+                  </span>
+                  <test-file-stub
+                    height="15"
+                    width="15"
+                  />
+                </section>
+              </a>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </section>
+</DocumentFragment>
+`;

@@ -2,7 +2,7 @@
 
 exports[`InPageNav component should render 1`] = `
 <div
-  className="in-page-nav in-page-nav--sticky"
+  className="in-page-nav"
 >
   <ul
     className=""
