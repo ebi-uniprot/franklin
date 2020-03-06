@@ -1,5 +1,13 @@
 import React from 'react';
-import { NavLink, Route, Redirect, useRouteMatch, useLocation, useHistory, useParams } from 'react-router-dom';
+import {
+  NavLink,
+  Route,
+  Redirect,
+  useRouteMatch,
+  useLocation,
+  useHistory,
+  useParams,
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../styles/components/display-menu.scss';
 
@@ -10,14 +18,14 @@ const DisplayMenu = ({ data }) => {
   const history = useHistory();
   const params = useParams();
 
-// console.log("location:", location);
-// console.log("params:", params);
-// console.log("default item:", defaultItem);
+  // console.log("location:", location);
+  // console.log("params:", params);
+  // console.log("default item:", defaultItem);
 
   if (location.hash.length === 0) {
     // history.push(`${url}/${defaultItem.path}`);
   }
-// console.log("url:", url);
+  // console.log("url:", url);
   return (
     <ul className="display-menu">
       <ul className="no-bullet">
@@ -25,7 +33,9 @@ const DisplayMenu = ({ data }) => {
           <li key={displayItem.name}>
             <h5 className="display-menu__item_title">
               <NavLink
-                to={(`${url}/${displayItem.path}`).replace(/[/]+[/]$/g, '/').replace(/[/]$/, '')}
+                to={`${url}/${displayItem.path}`
+                  .replace(/[/]+[/]$/g, '/')
+                  .replace(/[/]$/, '')}
                 exact
                 activeClassName="display-menu__item_title--active"
               >
@@ -50,23 +60,29 @@ const DisplayMenu = ({ data }) => {
           <Redirect to={`${url}/${defaultItem.path}`} />
         </Route> */}
 
-        <Route path="/" exact render={({ match }) => {
-          const { params } = match;
-// console.log("redirect props:", match);
-          if (location.hash.length > 0) {
-            return <Route
-              path={`${displayItem.route}`}
-              render={() => (
-                <div className="display-menu__item_content">
-                  {displayItem.itemContent}
-                </div>
-              )}
-              exact={displayItem.exact}
-            />
-          }
+        <Route
+          path="/"
+          exact
+          render={({ match }) => {
+            const { params } = match;
+            // console.log("redirect props:", match);
+            if (location.hash.length > 0) {
+              return (
+                <Route
+                  path={`${displayItem.route}`}
+                  render={() => (
+                    <div className="display-menu__item_content">
+                      {displayItem.itemContent}
+                    </div>
+                  )}
+                  exact={displayItem.exact}
+                />
+              );
+            }
 
-          // return <Redirect to={`${url}/${defaultItem.path}`} />;
-        }} />
+            // return <Redirect to={`${url}/${defaultItem.path}`} />;
+          }}
+        />
       </ul>
     </ul>
   );

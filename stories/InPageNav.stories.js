@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { InPageNav } from '../src/components';
-import { inPageNavItems } from '../src/components/in-page-nav-items';
+import inPageNavItems from '../src/components/in-page-nav-items';
 
 // const sections = [
 //   {
@@ -29,4 +29,15 @@ export default {
   },
 };
 
-export const inPageNav = () => <InPageNav items={inPageNavItems} />;
+export const inPageNav = () => (
+  <section style={{ display: 'flex' }}>
+    <InPageNav items={inPageNavItems} />
+    <section>
+      {inPageNavItems.map(navItem => (
+        <section id={navItem.to} key={navItem.id} style={{ height: 400 }}>
+          <h3>{navItem.label}</h3>
+        </section>
+      ))}
+    </section>
+  </section>
+);
