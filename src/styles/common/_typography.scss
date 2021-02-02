@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   font-family: $fs-headers-font-face;
-  color: $colour-yankees-blue;
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 
 h1 {
@@ -85,7 +85,7 @@ ul {
 }
 
 a {
-  color: $colour-link;
+  color: map-get($franklin-colours, colourLink);
   text-decoration: none;
   font-weight: font-weight('semi-bold');
   &:hover {

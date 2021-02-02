@@ -1,5 +1,5 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 @import '../common/z-index';
 @import '../mixins';
 
@@ -14,7 +14,7 @@
 }
 
 .hover {
-  color: $colour-yankees-blue;
+  color: map-get($franklin-colours, colourGreyscale600);
   border: none;
   background: $colour-platinum;
 }

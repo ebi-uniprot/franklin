@@ -1,4 +1,4 @@
-@import '../colours.js';
+@import '../colours';
 @import '../settings';
 
 .publication {
@@ -32,8 +32,8 @@
         border-left: 0.125rem solid $colour-vivid-cerulean;
         padding-left: 0.7rem;
         svg {
-          stroke: $colour-sapphire-blue;
-          fill: $colour-sapphire-blue;
+          stroke: map-get($franklin-colours, colourPrimary500);
+          fill: map-get($franklin-colours, colourPrimary500);
         }
       }
     }

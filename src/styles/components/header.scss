@@ -1,8 +1,9 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 @import '../mixins';
 
 $content-width: 90%;
+$background-color: map-get($franklin-colours, colourPrimary500);
 
 .header,
 .hero-header {
@@ -13,15 +14,14 @@ $content-width: 90%;
   padding: 0.5em 1em;
   background: linear-gradient(
     45deg,
-    $colour-sapphire-blue,
-    rgba($colour-sapphire-blue, 0.7),
-    $colour-sapphire-blue,
-    $colour-sapphire-blue
+    rgba($background-color, 0.7),
+    $background-color,
+    $background-color
   );
 
   &.header--negative {
     justify-content: space-between;
-    color: $colour-sapphire-blue;
+    color: $background-color;
     background: $colour-sky-white;
 
     a.button,
@@ -31,7 +31,7 @@ $content-width: 90%;
     a.button:hover,
     a.button:active,
     .header__logo > a {
-      color: $colour-sapphire-blue;
+      color: $background-color;
     }
 
     .header__search button.button {
@@ -64,7 +64,7 @@ $content-width: 90%;
     a.button:visited,
     a.button:hover,
     a.button:active {
-      color: $colour-sapphire-blue;
+      color: $background-color;
     }
   }
 

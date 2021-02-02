@@ -1,4 +1,4 @@
-@import '../colours.js';
+@import '../colours';
 
 .histogram {
   --main-color: var(--main-histogram-color, #{$colour-weldon-blue});

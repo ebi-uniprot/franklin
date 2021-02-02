@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 
 import { Chip } from '../src/components';
 
-import colors from '../src/styles/colours';
+import colors from '../src/styles/_colours.scss';
 
 export default {
   title: 'Core/Chip',

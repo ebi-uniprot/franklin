@@ -1,5 +1,5 @@
 @import './settings';
-@import './colours.js';
+@import './colours';
 @import './franklin-settings';
 
 $global-left: if($global-text-direction == rtl, right, left);
@@ -27,7 +27,8 @@ $global-right: if($global-text-direction == rtl, left, right);
 }
 
 @mixin box-shadow($spread: 0.125rem) {
-  box-shadow: 0 0.125rem 0.25rem $spread rgba($colour-yankees-blue, 0.2);
+  box-shadow: 0 0.125rem 0.25rem $spread
+    rgba(map-get($franklin-colours, colourGreyscale600), 0.2);
 }
 
 @function font-weight($weight) {

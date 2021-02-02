@@ -1,5 +1,5 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 @import '../mixins';
 @import '../franklin-settings';
 @import '../common/z-index';
@@ -81,7 +81,7 @@
 
   &__row {
     &--selected {
-      background-color: $colour-selected;
+      background-color: map-get($franklin-colours, colourSelected);
     }
   }
 

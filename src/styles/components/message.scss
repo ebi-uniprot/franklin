@@ -1,5 +1,5 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 
 @mixin SVGDefinition($level) {
   & > svg {
@@ -64,18 +64,18 @@
   }
 
   &--warning {
-    @include getWarningCSS($colour-warning);
+    @include getWarningCSS(map-get($franklin-colours, colourWarning));
   }
 
   &--failure {
-    @include getWarningCSS($colour-failure);
+    @include getWarningCSS(map-get($franklin-colours, colourFailure));
   }
 
   &--success {
-    @include getWarningCSS($colour-success);
+    @include getWarningCSS(map-get($franklin-colours, colourSucces));
   }
 
   &--info {
-    @include getWarningCSS($colour-info);
+    @include getWarningCSS(map-get($franklin-colours, colourInfo));
   }
 }

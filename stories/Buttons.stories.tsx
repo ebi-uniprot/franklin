@@ -3,7 +3,7 @@ import { withKnobs, select, boolean } from '@storybook/addon-knobs';
 
 import { Button, DownloadIcon } from '../src/components';
 
-import colors from '../src/styles/colours';
+import colors from '../src/styles/_colours.scss';
 
 export default {
   title: 'Forms/Button',

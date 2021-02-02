@@ -1,0 +1,41 @@
+@import 'colour-definition';
+
+$franklin-colours: (
+  colourPrimary500: $colour-sapphire-blue,
+  colourPrimary400: $colour-sea-blue,
+  colourPrimary300: $colour-vivid-cerulean,
+  colourPrimary200: $colour-medium-turquoise,
+  colourPrimary100: $colour-gainsborough,
+  colourGreyscale600: $colour-yankees-blue,
+  colourGreyscale500: $colour-independence,
+  colourGreyscale400: $colour-weldon-blue,
+  colourGreyscale300: $colour-pastel-blue,
+  colourGreyscale200: $colour-platinum,
+  colourGreyscale100: $colour-sky-white,
+  colourUniprotkb: $colour-sea-blue,
+  colourReviewed: $colour-buddha-gold,
+  colourUnreviewed: $colour-silver,
+  colourUniref: $colour-jaffa,
+  colourUniparc: $colour-de-york,
+  colourProteomes: $colour-terracotta,
+  colourSupportingData: $colour-pastel-blue,
+  colourPeptideSearch: $colour-amethyst,
+  colourIdMapping: $colour-calypso,
+  colourBlast: $colour-cerulean,
+  colourAlign: $colour-turmeric,
+  colourWarning: $colour-sunglow,
+  colourFailure: $colour-froly,
+  colourSuccess: $colour-salem,
+  colourInfo: $colour-malibu,
+  colourLink: $colour-sapphire-blue,
+  colourSelected: $colour-gainsborough,
+  colourHover: $colour-medium-turquoise,
+  colourDataVis1: $colour-coyote-brown,
+  colourDataVis2: $colour-outer-space,
+);
+
+@each $color, $value in $franklin-colours {
+  :export {
+    $color: $value;
+  }
+}

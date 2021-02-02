@@ -1,5 +1,5 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 
 .evidence-tag {
   cursor: pointer;
@@ -12,9 +12,9 @@
   line-height: 1.25rem;
   margin-left: ($global-margin/2);
   border-radius: $global-padding/4;
-  background-color: $colour-platinum;
+  background-color: map-get($franklin-colours, colourGreyscale200);
   padding: 0 $global-padding/4;
-  color: $colour-yankees-blue;
+  color: map-get($franklin-colours, colourGreyscale600);
   svg {
     position: absolute;
   }
@@ -33,10 +33,14 @@
   /* shadow trick from http://lea.verou.me/2012/04/background-attachment-local/ */
   background:
     /* Shadow covers */ linear-gradient(
-      $colour-platinum 30%,
+      map-get($franklin-colours, colourGreyscale200) 30%,
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(rgba(255, 255, 255, 0), $colour-platinum 70%) 0 100%,
+    linear-gradient(
+        rgba(255, 255, 255, 0),
+        map-get($franklin-colours, colourGreyscale200) 70%
+      )
+      0 100%,
     /* Shadows */
       radial-gradient(
         50% 0,
@@ -53,10 +57,14 @@
       0 100%;
   background:
   /* Shadow covers */ linear-gradient(
-      $colour-platinum 30%,
+      map-get($franklin-colours, colourGreyscale200) 30%,
       rgba(255, 255, 255, 0)
     ),
-    linear-gradient(rgba(255, 255, 255, 0), $colour-platinum 70%) 0 100%,
+    linear-gradient(
+        rgba(255, 255, 255, 0),
+        map-get($franklin-colours, colourGreyscale200) 70%
+      )
+      0 100%,
     /* Shadows */
       radial-gradient(
         farthest-side at 50% 0,
@@ -70,7 +78,7 @@
       )
       0 100%;
   background-repeat: no-repeat;
-  background-color: $colour-platinum;
+  background-color: map-get($franklin-colours, colourGreyscale200);
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;

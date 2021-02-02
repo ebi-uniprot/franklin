@@ -1,10 +1,10 @@
 @import '../settings';
 @import '../mixins';
-@import '../colours.js';
+@import '../colours';
 
 .facets {
   .facet-name {
-    color: $colour-yankees-blue;
+    color: map-get($franklin-colours, colourGreyscale600);
     font-weight: 800;
     margin-bottom: $global-margin / 4;
 
@@ -16,7 +16,7 @@
   & > ul > li {
     padding-bottom: $global-margin / 2;
     margin-bottom: $global-margin / 2;
-    border-bottom: 1px solid $colour-platinum;
+    border-bottom: 1px solid map-get($franklin-colours, colourGreyscale200);
     position: relative;
 
     a {
@@ -28,14 +28,14 @@
       padding: $global-margin / 3;
 
       &:hover {
-        background: $colour-selected;
+        background: map-get($franklin-colours, colourSelected);
         @include hover;
       }
     }
 
     a.facet-active {
       font-weight: bold;
-      background: $colour-selected;
+      background: map-get($franklin-colours, colourSelected);
 
       &:hover,
       &:focus {

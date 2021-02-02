@@ -1,4 +1,4 @@
-@import '../colours.js';
+@import '../colours';
 @import '../settings';
 @import '../mixins';
 
@@ -14,10 +14,10 @@ $line-height: 2rem;
       padding-left: 1rem;
     }
     &--active {
-      background-color: $colour-selected;
+      background-color: map-get($franklin-colours, colourSelected);
     }
     &:hover {
-      background-color: $colour-selected;
+      background-color: map-get($franklin-colours, colourSelected);
       @include hover;
     }
     &--active:before {
@@ -26,7 +26,7 @@ $line-height: 2rem;
       width: 0.2rem;
       margin-left: -1rem;
       height: $line-height;
-      border-left: 0.2rem solid $colour-link;
+      border-left: 0.2rem solid map-get($franklin-colours, colourLink);
     }
   }
   &__item_icon {
@@ -34,7 +34,7 @@ $line-height: 2rem;
     text-align: center;
     vertical-align: middle;
     width: $global-margin * 1.5;
-    fill: $colour-link;
+    fill: map-get($franklin-colours, colourLink);
     svg {
       height: 1rem;
       width: 1rem;

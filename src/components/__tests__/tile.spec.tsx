@@ -3,7 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 import Tile from '../tile';
 import { ProtVistaIcon } from '..';
 
-import colors from '../../styles/colours';
+import colors from '../../styles/colours.scss';
 
 let component: ReturnType<typeof render>;
 const clickFn = jest.fn();

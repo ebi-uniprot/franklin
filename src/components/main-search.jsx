@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import DropdownButton from './dropdown-button';
 import Button from './button';
 
-import color from '../styles/colours';
+import color from '../styles/_colours.scss';
 
 import '../styles/components/main-search.scss';
 

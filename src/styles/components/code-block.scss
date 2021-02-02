@@ -1,9 +1,9 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 
 .codeblock {
   display: inline-block;
-  background: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourGreyscale600);
   color: $white;
   font-family: $code-font-family;
   font-weight: $code-font-weight;

@@ -1,8 +1,9 @@
 @import '../settings';
-@import '../colours.js';
+@import '../colours';
 
+$test: map-get($franklin-colours, colourGreyscale200);
 .sequence-container {
-  background-color: rgba($colour-platinum, 0.7);
+  background-color: rgba(map-get($franklin-colours, colourGreyscale200), 0.7);
   .action-bar {
     justify-content: flex-start;
   }

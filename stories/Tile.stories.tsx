@@ -5,7 +5,7 @@ import { loremIpsum } from 'lorem-ipsum';
 import { Tile } from '../src/components';
 
 import SVG from '../assets/uniprotkb_illustration.svg';
-import colors from '../src/styles/colours';
+import colors from '../src/styles/_colours.scss';
 
 export default {
   title: 'Navigation/Tile',

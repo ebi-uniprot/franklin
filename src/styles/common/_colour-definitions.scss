@@ -1,127 +1,127 @@
-@import '../colours.js';
+@import '../colours';
 
 // PRIMARY
-.colour-sapphire-blue {
-  background: $colour-sapphire-blue;
-  color: $colour-sky-white;
+.colour-primary-500 {
+  background: map-get($franklin-colours, colourPrimary500);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-sea-blue {
-  background: $colour-sea-blue;
-  color: $colour-sky-white;
+.colour-primary-400 {
+  background: map-get($franklin-colours, colourPrimary400);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-vivid-cerulean {
-  background: $colour-vivid-cerulean;
-  color: $colour-sky-white;
+.colour-primary-300 {
+  background: map-get($franklin-colours, colourPrimary300);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-medium-turquoise {
-  background: $colour-medium-turquoise;
-  color: $colour-yankees-blue;
+.colour-primary-200 {
+  background: map-get($franklin-colours, colourPrimary200);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
-.colour-gainsborough {
-  background: $colour-gainsborough;
-  color: $colour-yankees-blue;
+.colour-primary-100 {
+  background: map-get($franklin-colours, colourPrimary100);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 
 // GREY
-.colour-yankees-blue {
-  background: $colour-yankees-blue;
-  color: $colour-sky-white;
+.colour-greyscale-600 {
+  background: map-get($franklin-colours, colourGreyscale600);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-independence {
-  background: $colour-independence;
-  color: $colour-sky-white;
+.colour-greyscale-500 {
+  background: map-get($franklin-colours, colourGreyscale500);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-weldon-blue {
-  background: $colour-weldon-blue;
-  color: $colour-sky-white;
+.colour-greyscale-400 {
+  background: map-get($franklin-colours, colourGreyscale400);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
-.colour-pastel-blue {
-  background: $colour-pastel-blue;
-  color: $colour-yankees-blue;
+.colour-greyscale-300 {
+  background: map-get($franklin-colours, colourGreyscale300);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
-.colour-platinum {
-  background: $colour-platinum;
-  color: $colour-yankees-blue;
+.colour-greyscale-200 {
+  background: map-get($franklin-colours, colourGreyscale200);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
-.colour-sky-white {
-  background: $colour-sky-white;
-  color: $colour-yankees-blue;
+.colour-greyscale-100 {
+  background: map-get($franklin-colours, colourGreyscale100);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 // CURATION
 .colour-reviewed {
-  background: $colour-reviewed;
-  color: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourReviewed);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 .colour-unreviewed {
-  background: $colour-unreviewed;
-  color: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourUnreviewed);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 // NAMESPACE
 .colour-uniprotkb {
-  background: $colour-uniprotkb;
-  color: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourUniprotkb);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 .colour-uniref {
-  background: $colour-uniref;
-  color: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourUniref);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 .colour-uniparc {
-  background: $colour-uniparc;
-  color: $colour-yankees-blue;
+  background: map-get($franklin-colours, colourUniparc);
+  color: map-get($franklin-colours, colourGreyscale600);
 }
 .colour-proteomes {
-  background: $colour-proteomes;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourProteomes);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 .colour-supporting-data {
-  background: $colour-supporting-data;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourSupportingData);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 .colour-peptide-search {
-  background: $colour-peptide-search;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourPeptideSearch);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 .colour-id-mapping {
-  background: $colour-id-mapping;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourIdMapping);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 .colour-blast {
-  background: $colour-blast;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourBlast);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 .colour-align {
-  background: $colour-align;
-  color: $colour-sky-white;
+  background: map-get($franklin-colours, colourAlign);
+  color: map-get($franklin-colours, colourGreyscale100);
 }
 
 // svg fills
 .svg-colour-reviewed svg {
-  color: $colour-reviewed;
+  color: map-get($franklin-colours, colourReviewed);
 }
 .svg-colour-unreviewed svg {
-  color: $colour-unreviewed;
+  color: map-get($franklin-colours, colourUnreviewed);
 }
 
 // messages
 .colour-warning {
-  background: $colour-warning;
+  background: map-get($franklin-colours, colourWarning);
 }
 .colour-failure {
-  background: $colour-failure;
+  background: map-get($franklin-colours, colourFailure);
 }
 .colour-success {
-  background: $colour-success;
+  background: map-get($franklin-colours, colourSuccess);
 }
 .colour-info {
-  background: $colour-info;
+  background: map-get($franklin-colours, colourInfo);
 }
 
 // Data visualisation
 .colour-coyote-brown {
-  background: $colour-coyote-brown;
+  background: map-get($franklin-colours, colourDataVis1);
 }
 .colour-outer-space {
-  background: $colour-outer-space;
+  background: map-get($franklin-colours, colourDataVis2);
 }
 
 .box-colour {
@@ -133,7 +133,7 @@
   font-size: $small-font-size;
   &:before {
     content: attr(data-name);
-    color: $colour-yankees-blue;
+    color: map-get($franklin-colours, colourGreyscale600);
     margin-top: 10em;
     display: block;
     text-align: center;

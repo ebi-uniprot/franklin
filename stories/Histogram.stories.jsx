@@ -9,7 +9,7 @@ import {
   getGaussianSample,
 } from '../src/mock-data/probability-distribution-sample';
 
-import colors from '../src/styles/colours';
+import colors from '../src/styles/_colours.scss';
 
 export default {
   title: 'Visualisation/Histogram',
@@ -61,7 +61,7 @@ const ChangingGaussianComponent = () => {
         '--main-histogram-color': select(
           '--main-histogram-color',
           colors,
-          colors.weldonBlue,
+          colors.colourGreyscale400,
           'Custom Properties'
         ),
         '--histogram-bar-gap': text(
@@ -84,7 +84,7 @@ export const Gaussian = () => (
       '--main-histogram-color': select(
         '--main-histogram-color',
         colors,
-        colors.weldonBlue,
+        colors.colourGreyscale400,
         'Custom Properties'
       ),
       '--histogram-bar-gap': text(
@@ -105,7 +105,7 @@ export const Uniform = () => (
       '--main-histogram-color': select(
         '--main-histogram-color',
         colors,
-        colors.weldonBlue,
+        colors.colourGreyscale400,
         'Custom Properties'
       ),
       '--histogram-bar-gap': text(

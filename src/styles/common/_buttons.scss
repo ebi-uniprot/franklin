@@ -1,6 +1,6 @@
 @import '../settings';
 @import '../mixins';
-@import '../colours.js';
+@import '../colours';
 
 .button {
   --main-color: var(--main-button-color, #{$colour-sea-blue});

@@ -9,7 +9,8 @@
       border: inset 0.4rem;
       border-right-width: 0;
       border-left-style: solid;
-      border-color: transparent transparent transparent $colour-yankees-blue;
+      border-color: transparent transparent transparent
+        map-get($franklin-colours, colourGreyscale600);
       position: relative;
       top: 0.4rem;
       float: right;

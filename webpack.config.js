@@ -1,8 +1,6 @@
 const path = require('path');
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-const jsonImporter = require('node-sass-json-importer');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = [
@@ -44,6 +42,9 @@ module.exports = [
               loader: 'style-loader', // creates style nodes from JS strings
             },
             {
+              loader: 'css-modules-typescript-loader', // generate a .d.ts module
+            },
+            {
               loader: 'css-loader', // translates CSS into CommonJS
             },
             {
@@ -51,7 +52,6 @@ module.exports = [
               options: {
                 sassOptions: {
                   includePaths: [path.resolve(__dirname, 'src/styles')],
-                  importer: jsonImporter({ convertCase: true }),
                 },
               },
             },
