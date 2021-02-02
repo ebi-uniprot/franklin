@@ -137,7 +137,6 @@
     "browser-sync-webpack-plugin": "2.3.0",
     "core-js": "3.8.2",
     "css-loader": "5.0.1",
-    "css-modules-typescript-loader": "^4.0.1",
     "eslint": "7.17.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "7.1.0",

@@ -42,9 +42,6 @@ module.exports = [
               loader: 'style-loader', // creates style nodes from JS strings
             },
             {
-              loader: 'css-modules-typescript-loader', // generate a .d.ts module
-            },
-            {
               loader: 'css-loader', // translates CSS into CommonJS
             },
             {
